@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&family=Montserrat:ital,wght@0,500;0,700;1,500;1,700&display=swap');
+
+.attribution {
+     width: 100%;
+     font-size: 11px; text-align: center; 
+     position: fixed;
+     bottom: 0;
+     left: 50%;
+     transform: translate(-50%, -50%);
+    }
+.attribution a {
+     color: hsl(228, 45%, 44%); 
+    }
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(30, 38%, 92%);
+    font-size: 14px;
+}
+
+main {
+    width: 90vw;
+    height: 90vh;
+    background-color:hsl(0, 0%, 100%);
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr 0.5fr 0.5fr;
+    grid-template-columns: 1fr;
+    
+}
+
+#imgDiv {
+    border-radius: 10px 10px 0 0;
+
+}
+
+#image {
+    width: 90vw;
+    border-radius: 10px 10px 0 0 ;
+}
+
+#headerDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 75vw;
+    height: 100%;
+    place-self: center;
+}
+
+#h6 {
+    text-transform:uppercase;
+    font-family: Montserrat, sans-serif;
+    font-weight: 100;
+    font-size: 0.7em;
+    letter-spacing: 4px;
+    color: hsl(228, 12%, 48%);
+    margin-top: 2vh;
+}
+
+#h1 {
+    font-size: 2.3em;
+    font-family: "Fraunces", serif;
+}
+
+#paragraphDiv {
+    width: 75vw;
+    height: 100%;
+    place-self: center;
+    display: flex;
+    align-items: center;
+}
+
+#paragraph {
+    line-height: 1.5;
+    color: hsl(228, 12%, 48%);
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+}
+
+#priceDiv {
+    width: 75vw;
+    height: 100%;
+    place-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+#newPrice {
+    display: inline-block;
+    place-self: center;
+    font-family: Fraunces, serif;
+    color: hsl(158, 36%, 37%);
+    font-size: 1.5rem;
+}
+
+#oldPrice {
+    display: inline-block;
+    place-self: center;
+    font-family: Montserrat, sans-serif;
+    font-size: 0.6rem;
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+}
+
+#buttonDiv {
+    width: 75vw;
+    height: 100%;
+    place-self: center;
+}
+
+#button {
+    width: 100%;
+    height: 6vh;
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-family: Montserrat, sans-serif;
+}
+
+#cartLogo {
+    margin-right: 2vw;
+}
+
+@media screen and (min-width: 767px) {
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: hsl(30, 38%, 92%);
+        font-size: 14px;
+    }
+    
+    main {
+        width: 50vw;
+        min-width: 520px;
+        min-height: 0px;
+        height: 60vh;
+        background-color:hsl(0, 0%, 100%);
+        border-radius: 10px;
+        display: grid;
+        grid-template-rows: 1fr 1fr 0.5fr 0.5fr;
+        grid-template-columns: 0.9fr 1.1fr;
+        grid-template-areas: 
+        "image header"
+        "image paragraph"
+        "image price"
+        "image button"
+        ;
+        
+    }
+    
+    #imgDiv {
+        border-radius: 10px 10px 0 0;
+        grid-area: image;
+    }
+    
+    #image {
+        height: 60vh;
+        width: auto;
+        border-radius: 10px 0 0 10px ;
+    }
+    
+    #headerDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 22vw;
+        height: 100%;
+        place-self: center;
+        grid-area: header;
+    }
+    
+    #h6 {
+        text-transform:uppercase;
+        font-family: Montserrat, sans-serif;
+        font-weight: 100;
+        font-size: 0.7em;
+        letter-spacing: 4px;
+        color: hsl(228, 12%, 48%);
+        margin: 4vh 2vh 2vh 0;
+    }
+    
+    #h1 {
+        font-size: 1.7em;
+        font-family: "Fraunces", serif;
+    }
+    
+    #paragraphDiv {
+        width: 22vw;
+        height: 100%;
+        place-self: center;
+        display: flex;
+        align-items: center;
+        grid-area: paragraph;
+    }
+    
+    #paragraph {
+        line-height: 1.5;
+        color: hsl(228, 12%, 48%);
+        font-family: Montserrat, sans-serif;
+        font-size: 14px;
+        padding: 1rem 0 0.5rem 0;
+    }
+    
+    #priceDiv {
+        width: 22vw;
+        height: 100%;
+        place-self: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-area: price;
+    }
+    
+    #newPrice {
+        display: inline-block;
+        place-self: center;
+        font-family: Fraunces, serif;
+        color: hsl(158, 36%, 37%);
+        font-size: 1.5rem;
+    }
+    
+    #oldPrice {
+        display: inline-block;
+        place-self: center;
+        font-family: Montserrat, sans-serif;
+        font-size: 0.6rem;
+        color: hsl(228, 12%, 48%);
+        text-decoration: line-through;
+    }
+    
+    #buttonDiv {
+        width: 22vw;
+        height: 100%;
+        place-self: center;
+        grid-area: button;
+    }
+    
+    #button {
+        width: 100%;
+        height: 6vh;
+        background-color: hsl(158, 36%, 37%);
+        color: hsl(0, 0%, 100%);
+        border: none;
+        border-radius: 8px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        font-family: Montserrat, sans-serif;
+        margin: 0.8rem 0;
+    }
+    
+    #cartLogo {
+        margin-right: 2vw;
+    }
+}
